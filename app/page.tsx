@@ -31,26 +31,26 @@ export default function Home() {
       {/* Navbar */}
       <nav className="fixed top-0 w-full z-50 bg-transparent backdrop-blur-sm">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+          <div className="flex justify-between items-center h-28">
             <div className="flex-shrink-0 flex items-center">
               <Link href="/" className="flex items-center gap-2">
                 <Image
                   src="/images/abal-logo.svg"
                   alt="Abal Logo"
-                  width={40}
-                  height={40}
-                  className="w-10 h-10"
+                  width={96}
+                  height={96}
+                  className="w-24 h-24"
                 />
-                <span className="text-2xl font-bold text-gray-900 tracking-tight">Abal</span>
+
               </Link>
             </div>
-            
+
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
               {['Features', 'Solutions', 'Pricing', 'About'].map((item) => (
-                <Link 
-                  key={item} 
-                  href={`#${item.toLowerCase()}`} 
+                <Link
+                  key={item}
+                  href={`#${item.toLowerCase()}`}
                   className="text-gray-700 hover:text-[var(--brand)] font-medium transition-colors"
                 >
                   {item}
@@ -63,7 +63,7 @@ export default function Home() {
 
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button 
+              <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="text-gray-600 hover:text-gray-900 p-2"
               >
@@ -75,7 +75,7 @@ export default function Home() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
@@ -105,7 +105,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center pt-32 pb-20 lg:pt-0 lg:pb-0 overflow-hidden bg-white">
         {/* Main Background Gradient - Subtle but rich */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(18,120,88,0.15),rgba(255,255,255,0))]"></div>
-        
+
         {/* Secondary Gradient - Bottom Right for depth */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_120%,rgba(59,130,246,0.15),rgba(255,255,255,0))]"></div>
 
@@ -126,15 +126,15 @@ export default function Home() {
               <motion.div variants={fadeIn} className="mb-6">
                 <span className="text-[var(--brand)] font-bold tracking-widest text-sm uppercase">The #1 Gym Management System in Ethiopia</span>
               </motion.div>
-              
-              <motion.h1 variants={fadeIn} className="text-5xl lg:text-6xl xl:text-7xl font-bold text-gray-900 tracking-tight mb-8 leading-[1.25]">
+
+              <motion.h1 variants={fadeIn} className="text-4xl lg:text-5xl xl:text-5xl font-bold text-gray-900 tracking-tight mb-8 leading-[1.2]">
                 Modern Gym Management Software Built for Growing Fitness Centers
               </motion.h1>
-              
+
               <motion.p variants={fadeIn} className="text-lg text-gray-600 mb-10 max-w-lg leading-relaxed">
                 Manage memberships, automate billing, and track performance—all from one powerful, easy-to-use platform. Trusted by gyms across Ethiopia.
               </motion.p>
-              
+
               <motion.div variants={fadeIn}>
                 <button className="px-8 py-4 bg-[var(--brand)] text-white rounded-md font-semibold text-lg hover:bg-[var(--brand-dark)] transition-all shadow-lg hover:shadow-[var(--brand)]/20 inline-flex items-center gap-2">
                   Request a Demo
@@ -152,16 +152,16 @@ export default function Home() {
               <div className="relative">
                 {/* Main Monitor */}
                 <div className="relative z-20 transform transition-transform hover:scale-[1.02] duration-500">
-        <Image
+                  <Image
                     src="/images/abal-main-mockup.png"
                     alt="Abal Dashboard Interface"
                     width={1920}
                     height={1080}
                     className="w-full h-auto drop-shadow-2xl rounded-lg"
-          priority
-        />
+                    priority
+                  />
                 </div>
-                
+
                 {/* Background Glow/Shadow */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-blue-500/20 blur-[80px] -z-10 rounded-full"></div>
               </div>
@@ -234,7 +234,7 @@ export default function Home() {
       <section className="py-24 overflow-hidden bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center gap-16">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -256,7 +256,7 @@ export default function Home() {
                 ))}
               </ul>
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -283,7 +283,7 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col lg:flex-row-reverse items-center gap-16">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -300,7 +300,7 @@ export default function Home() {
                 Explore the Member App <ArrowRight size={16} />
               </button>
             </motion.div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -327,7 +327,7 @@ export default function Home() {
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
 
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -335,7 +335,7 @@ export default function Home() {
           >
             Ready to upgrade your gym?
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -344,7 +344,7 @@ export default function Home() {
           >
             Join hundreds of forward-thinking fitness studios and gyms who trust Abal to power their growth.
           </motion.p>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -380,7 +380,7 @@ export default function Home() {
                 The most elegant and powerful gym management software on the market. Built for modern fitness businesses.
               </p>
             </div>
-            
+
             <div>
               <h4 className="font-semibold text-gray-900 mb-4">Product</h4>
               <ul className="space-y-3 text-sm text-gray-600">
@@ -409,7 +409,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-gray-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">
               © {new Date().getFullYear()} Abal. All rights reserved.
