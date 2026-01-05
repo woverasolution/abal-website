@@ -2,6 +2,8 @@
 
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
+import CoreBenefits from "@/components/home/CoreBenefits";
+import TransformationSection from "@/components/home/TransformationSection";
 import FeaturesGrid from "@/components/home/FeaturesGrid";
 import OperationalClarity from "@/components/home/OperationalClarity";
 import MemberExperience from "@/components/home/MemberExperience";
@@ -13,6 +15,8 @@ export default function Home() {
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Navbar />
       <Hero />
+      <CoreBenefits />
+      <TransformationSection />
       <FeaturesGrid />
       <OperationalClarity />
       <MemberExperience />
