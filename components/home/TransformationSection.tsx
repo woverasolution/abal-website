@@ -24,7 +24,7 @@ export default function TransformationSection() {
                             <div className="absolute inset-0 bg-gray-900/5 mix-blend-multiply pointer-events-none" />
                             <Image
                                 src="/images/abal-mockup-3.png"
-                                alt="Abal Dashboard Interface"
+                                alt="Abal gym management software interface showing access control"
                                 width={1200}
                                 height={800}
                                 className="w-full h-auto object-cover"
@@ -42,27 +42,11 @@ export default function TransformationSection() {
                             <div className="rounded-lg overflow-hidden border border-gray-50">
                                 <Image
                                     src="/images/abal-revenue-screenshot.png"
-                                    alt="Revenue Growth"
+                                    alt="Gym revenue tracking dashboard in Abal software Ethiopia"
                                     width={400}
                                     height={300}
                                     className="w-full h-auto"
                                 />
-                            </div>
-                        </motion.div>
-
-                        {/* Anchored Insight Card - Membership */}
-                        <motion.div
-                            initial={{ opacity: 0, x: -40 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: 0.3, duration: 0.8 }}
-                            className="absolute -top-6 -left-6 z-20 w-[200px] bg-white rounded-xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] border border-gray-100 p-4 flex gap-3 items-center"
-                        >
-                            <div className="bg-red-50 text-red-500 p-2 rounded-lg">
-                                <HandWaving weight="bold" size={20} />
-                            </div>
-                            <div>
-                                <p className="text-xs text-gray-400 font-medium uppercase tracking-wider mb-0.5">Alert</p>
-                                <p className="text-sm font-bold text-gray-900">Entry Denied</p>
                             </div>
                         </motion.div>
 
@@ -87,7 +71,7 @@ export default function TransformationSection() {
                             variants={fadeIn}
                             className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-[1.1] mb-6 tracking-tight"
                         >
-                            Turn your gym into a <br />
+                            Turn your gym in Ethiopia into a <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--brand)] to-emerald-600">
                                 money making machine
                             </span>

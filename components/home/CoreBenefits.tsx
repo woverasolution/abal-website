@@ -189,7 +189,6 @@ function SmsVisual() {
                     <p className="text-[9px] text-gray-700 leading-relaxed">
                         This week only: 20% off 3-month plans
                     </p>
-                    
                 </motion.div>
             </div>
         </div>
@@ -291,7 +290,7 @@ export default function CoreBenefits() {
                 </motion.div>
 
                 {/* CTA */}
-                <motion.div
+                {/* <motion.div
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -302,7 +301,7 @@ export default function CoreBenefits() {
                         Explore all features
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
-                </motion.div>
+                </motion.div> */}
             </div>
         </section>
     );

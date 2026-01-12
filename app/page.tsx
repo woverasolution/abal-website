@@ -1,15 +1,20 @@
-"use client";
-
+import { Metadata } from "next";
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
 import CoreBenefits from "@/components/home/CoreBenefits";
 import TransformationSection from "@/components/home/TransformationSection";
 import LeadManagement from "@/components/home/LeadManagement";
-import FeaturesGrid from "@/components/home/FeaturesGrid";
-import OperationalClarity from "@/components/home/OperationalClarity";
-import MemberExperience from "@/components/home/MemberExperience";
+import Testimonials from "@/components/home/Testimonials";
 import CallToAction from "@/components/home/CallToAction";
 import Footer from "@/components/layout/Footer";
+
+export const metadata: Metadata = {
+  title: "Abal - #1 Gym Management Software in Ethiopia",
+  description: "Modern gym management software tailored for Ethiopian fitness centers. Manage memberships, payments, and check-ins effortlessly.",
+  alternates: {
+    canonical: "https://abal.et",
+  },
+};
 
 export default function Home() {
   return (
@@ -19,9 +24,7 @@ export default function Home() {
       <CoreBenefits />
       <TransformationSection />
       <LeadManagement />
-      <FeaturesGrid />
-      <OperationalClarity />
-      <MemberExperience />
+      <Testimonials />
       <CallToAction />
       <Footer />
     </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { fadeIn, staggerContainer } from "@/lib/animations";
 
@@ -50,9 +51,12 @@ export default function Hero() {
             </motion.p>
 
             <motion.div variants={fadeIn}>
-              <button className="px-8 py-4 bg-[var(--brand)] text-white rounded-md font-semibold text-lg hover:bg-[var(--brand-dark)] transition-all shadow-lg hover:shadow-[var(--brand)]/20 inline-flex items-center gap-2">
+              <Link
+                href="/contact"
+                className="px-8 py-4 bg-[var(--brand)] text-white rounded-md font-semibold text-lg hover:bg-[var(--brand-dark)] transition-all shadow-lg hover:shadow-[var(--brand)]/20 inline-flex items-center gap-2"
+              >
                 Get a Free Demo
-              </button>
+              </Link>
             </motion.div>
 
             <motion.div
@@ -128,7 +132,7 @@ export default function Hero() {
               <div className="relative z-20 transform transition-transform hover:scale-[1.02] duration-500">
                 <Image
                   src="/images/abal-main-mockup.png"
-                  alt="Abal Dashboard Interface"
+                  alt="Abal gym management dashboard - member tracking and payments"
                   width={1920}
                   height={1080}
                   className="w-full h-auto drop-shadow-2xl rounded-lg"
