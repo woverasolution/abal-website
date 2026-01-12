@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
 import CoreBenefits from "@/components/home/CoreBenefits";
 import TransformationSection from "@/components/home/TransformationSection";
+import LeadManagement from "@/components/home/LeadManagement";
 import FeaturesGrid from "@/components/home/FeaturesGrid";
 import OperationalClarity from "@/components/home/OperationalClarity";
 import MemberExperience from "@/components/home/MemberExperience";
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <CoreBenefits />
       <TransformationSection />
+      <LeadManagement />
       <FeaturesGrid />
       <OperationalClarity />
       <MemberExperience />

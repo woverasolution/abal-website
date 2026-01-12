@@ -134,7 +134,7 @@ export default function CoreBenefits() {
                         className="group relative bg-white rounded-3xl border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-500 overflow-hidden flex flex-col"
                     >
                         <div className="p-8 pb-0">
-                            <div className="w-12 h-12 rounded-2xl bg-purple-50 flex items-center justify-center mb-6 text-purple-600">
+                            <div className="w-12 h-12 rounded-2xl bg-[rgb(173,250,30)]/20 flex items-center justify-center mb-6 text-[rgb(140,200,25)]">
                                 <TrendingUp className="w-6 h-6" />
                             </div>
                             <h3 className="text-2xl font-bold text-gray-900 mb-3">Data-Driven Growth</h3>
@@ -144,13 +144,13 @@ export default function CoreBenefits() {
                         </div>
 
                         {/* Visual Stage */}
-                        <div className="mt-auto h-48 bg-gray-50 relative overflow-hidden border-t border-gray-100 group-hover:bg-purple-50/50 transition-colors duration-500">
+                        <div className="mt-auto h-48 bg-gray-50 relative overflow-hidden border-t border-gray-100 group-hover:bg-[rgb(173,250,30)]/10 transition-colors duration-500">
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="flex items-end gap-3 h-24 mb-4">
-                                    <div className="w-6 bg-purple-200 rounded-t-lg h-[40%] group-hover:h-[50%] transition-all duration-500"></div>
-                                    <div className="w-6 bg-purple-300 rounded-t-lg h-[60%] group-hover:h-[70%] transition-all duration-500 delay-75"></div>
-                                    <div className="w-6 bg-purple-400 rounded-t-lg h-[50%] group-hover:h-[60%] transition-all duration-500 delay-150"></div>
-                                    <div className="w-6 bg-purple-600 rounded-t-lg h-[80%] group-hover:h-[95%] transition-all duration-500 delay-200 relative">
+                                    <div className="w-6 bg-[rgb(173,250,30)]/30 rounded-t-lg h-[40%] group-hover:h-[50%] transition-all duration-500"></div>
+                                    <div className="w-6 bg-[rgb(173,250,30)]/50 rounded-t-lg h-[60%] group-hover:h-[70%] transition-all duration-500 delay-75"></div>
+                                    <div className="w-6 bg-[rgb(173,250,30)]/70 rounded-t-lg h-[50%] group-hover:h-[60%] transition-all duration-500 delay-150"></div>
+                                    <div className="w-6 bg-[rgb(173,250,30)] rounded-t-lg h-[80%] group-hover:h-[95%] transition-all duration-500 delay-200 relative">
                                         {/* Tooltip-ish indicator */}
                                         <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                                             +24% Growth
