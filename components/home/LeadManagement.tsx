@@ -8,8 +8,8 @@ export default function LeadManagement() {
     return (
         <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
             {/* Decorative Background Elements */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-teal-500/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-cyan-500/5 to-transparent rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-[var(--brand)]/5 to-transparent rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-to-tr from-amber-500/5 to-transparent rounded-full blur-3xl translate-y-1/2 -translate-x-1/3"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
@@ -61,22 +61,22 @@ export default function LeadManagement() {
                                     title: "Capture Every Lead",
                                     desc: "Abal's lead management captures visitor names and phone numbers instantly. No more forgotten faces or lost opportunities.",
                                     icon: UserPlus,
-                                    color: "text-teal-600",
-                                    bg: "bg-teal-50",
+                                    color: "text-[var(--brand)]",
+                                    bg: "bg-[var(--brand)]/10",
                                 },
                                 {
                                     title: "Follow Up with Purpose",
                                     desc: "Send targeted promotions, new service announcements, or limited-time offers directly to people who already showed interest.",
                                     icon: Phone,
-                                    color: "text-cyan-600",
-                                    bg: "bg-cyan-50",
+                                    color: "text-amber-600",
+                                    bg: "bg-amber-50",
                                 },
                                 {
                                     title: "Convert Browsers to Members",
                                     desc: "Turn casual visitors into paying members with systematic follow-ups. A simple reminder can be the difference between a lost lead and a new customer.",
                                     icon: Target,
-                                    color: "text-[var(--brand)]",
-                                    bg: "bg-[var(--brand)]/10",
+                                    color: "text-orange-600",
+                                    bg: "bg-orange-50",
                                 }
                             ].map((item, i) => (
                                 <motion.div
@@ -145,11 +145,11 @@ export default function LeadManagement() {
                                         transition={{ delay: 0.4 }}
                                         className="flex items-center gap-4"
                                     >
-                                        <div className="w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center text-teal-600">
+                                        <div className="w-12 h-12 rounded-full bg-[var(--brand)]/10 flex items-center justify-center text-[var(--brand)]">
                                             <Phone className="w-5 h-5" />
                                         </div>
-                                        <div className="flex-1 bg-white rounded-xl p-4 shadow-sm border border-teal-200">
-                                            <p className="text-sm text-teal-600 mb-1 font-medium">Abal Captures</p>
+                                        <div className="flex-1 bg-white rounded-xl p-4 shadow-sm border border-[var(--brand)]/20">
+                                            <p className="text-sm text-[var(--brand)] mb-1 font-medium">Abal Captures</p>
                                             <div className="flex gap-3">
                                                 <div className="flex-1">
                                                     <div className="text-xs text-gray-400 mb-1">Name</div>
@@ -175,11 +175,11 @@ export default function LeadManagement() {
                                         transition={{ delay: 0.6 }}
                                         className="flex items-center gap-4"
                                     >
-                                        <div className="w-12 h-12 rounded-full bg-cyan-50 flex items-center justify-center text-cyan-600">
+                                        <div className="w-12 h-12 rounded-full bg-amber-50 flex items-center justify-center text-amber-600">
                                             <Target className="w-5 h-5" />
                                         </div>
-                                        <div className="flex-1 bg-white rounded-xl p-4 shadow-sm border border-cyan-100">
-                                            <p className="text-sm text-cyan-600 mb-1 font-medium">You Follow Up</p>
+                                        <div className="flex-1 bg-white rounded-xl p-4 shadow-sm border border-amber-100">
+                                            <p className="text-sm text-amber-600 mb-1 font-medium">You Follow Up</p>
                                             <p className="text-sm text-gray-600">&quot;Hi! This week only: 20% off memberships...&quot;</p>
                                         </div>
                                     </motion.div>
@@ -214,10 +214,10 @@ export default function LeadManagement() {
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 1 }}
-                                className="absolute -bottom-6 -right-4 lg:-right-8 bg-white rounded-xl shadow-xl border border-teal-100 p-4 w-[180px]"
+                                className="absolute -bottom-6 -right-4 lg:-right-8 bg-white rounded-xl shadow-xl border border-gray-100 p-4 w-[180px]"
                             >
                                 <div className="text-xs text-gray-400 uppercase tracking-wider mb-1">Potential Revenue</div>
-                                <div className="text-2xl font-bold text-teal-600">+35%</div>
+                                <div className="text-2xl font-bold text-[var(--brand)]">+35%</div>
                                 <div className="text-sm text-gray-600">from captured leads</div>
                             </motion.div>
                         </div>
