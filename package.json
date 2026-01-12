@@ -12,6 +12,7 @@
     "@fontsource/inter": "^5.2.8",
     "@fontsource/sora": "^5.2.8",
     "@phosphor-icons/react": "^2.1.10",
+    "@vercel/analytics": "^1.6.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
     "lucide-react": "^0.562.0",
