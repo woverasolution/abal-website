@@ -44,7 +44,7 @@ const plans = [
         description: "Full-featured solution for established gyms",
         monthlyPrice: 9999,
         features: [
-            "Unlimited members",
+            "Up to 600 members",
             "Everything in Growth",
             "Lead management",
             "Advanced analytics",
@@ -53,6 +53,22 @@ const plans = [
         ],
         cta: "Go Pro",
         popular: true,
+    },
+    {
+        name: "Abal Advanced",
+        description: "Premium operations suite for high-growth fitness businesses",
+        monthlyPrice: 14999,
+        features: [
+            "Unlimited members",
+            "Everything in Pro",
+            "Class scheduling",
+            "Advanced spa management",
+            "Customer web portal integration",
+            "Dedicated account manager",
+            "Employee services management",
+        ],
+        cta: "Choose Advanced",
+        popular: false,
     },
     {
         name: "Abal Enterprise",
@@ -200,7 +216,7 @@ export default function PricingClient() {
                     </div>
 
                     {/* Pricing Cards */}
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
                         {plans.map((plan, index) => {
                             const price = getPrice(plan.monthlyPrice);
                             return (
