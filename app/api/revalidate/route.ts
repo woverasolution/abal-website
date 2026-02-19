@@ -44,18 +44,24 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const type = body?._type || null;
+
     revalidateTag(BLOG_TAG, "max");
     revalidatePath("/blog");
+    revalidatePath("/sitemap.xml");
 
     const slug = resolveSlug(body || null);
-    if (slug) {
+    if (type === "post" && slug) {
       revalidateTag(postTag(slug), "max");
       revalidatePath(`/blog/${slug}`);
+    } else {
+      // Author/category updates affect many post pages, so invalidate blog subtree.
+      revalidatePath("/blog", "layout");
     }
 
     return NextResponse.json({
       revalidated: true,
-      type: body?._type || null,
+      type,
       slug,
     });
   } catch (error) {
