@@ -42,6 +42,16 @@ export default function Navbar() {
                                 Home
                             </Link>
                             <Link
+                                href="/blog"
+                                className={`font-medium transition-colors ${
+                                    pathname.startsWith("/blog")
+                                        ? "text-[var(--brand)]"
+                                        : "text-gray-700 hover:text-[var(--brand)]"
+                                }`}
+                            >
+                                Blog
+                            </Link>
+                            <Link
                                 href="/pricing"
                                 className={`font-medium transition-colors ${
                                     pathname === "/pricing"
@@ -94,6 +104,16 @@ export default function Navbar() {
                             }`}
                         >
                             Home
+                        </Link>
+                        <Link
+                            href="/blog"
+                            className={`block px-3 py-4 text-base font-medium rounded-md ${
+                                pathname.startsWith("/blog")
+                                    ? "text-[var(--brand)] bg-gray-50"
+                                    : "text-gray-600 hover:text-[var(--brand)] hover:bg-gray-50"
+                            }`}
+                        >
+                            Blog
                         </Link>
                         <Link
                             href="/pricing"

@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/admin/'], // Assuming these might exist or will exist
+      disallow: ['/api/', '/admin/', '/studio/'],
     },
     sitemap: 'https://abal.et/sitemap.xml',
   };
