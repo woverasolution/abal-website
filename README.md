@@ -1,5 +1,80 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Blog + Sanity Setup
+
+This project now includes:
+
+- A public blog index at `/blog`
+- Dynamic post pages at `/blog/[slug]`
+- Embedded Sanity Studio at `/studio`
+
+### 1. Add environment variables
+
+Create `.env.local` using `.env.example`:
+
+```bash
+cp .env.example .env.local
+```
+
+Fill in:
+
+- `NEXT_PUBLIC_SANITY_PROJECT_ID`
+- `NEXT_PUBLIC_SANITY_DATASET` (usually `production`)
+- `NEXT_PUBLIC_SANITY_API_VERSION` (date format, e.g. `2025-01-01`)
+- `NEXT_PUBLIC_SANITY_STUDIO_TITLE` (optional display title)
+- `SANITY_REVALIDATE_SECRET` (long random string, server-side only)
+
+### 2. Run locally
+
+```bash
+npm install
+npm run dev
+```
+
+Then open:
+
+- `http://localhost:3000/blog`
+- `http://localhost:3000/studio`
+
+### 3. Create content in Studio
+
+In `/studio`, create:
+
+- `Author`
+- `Category` (optional)
+- `Post` with title, slug, main image, author, and body
+
+Publish a post and it will appear on `/blog`.
+
+### 4. Set up on-demand revalidation (Production)
+
+This project includes a signed webhook endpoint at `/api/revalidate`.
+
+In Sanity Manage, create a webhook with:
+
+- URL: `https://YOUR_DOMAIN/api/revalidate`
+- Method: `POST`
+- API version: `v2021-03-25` (or latest)
+- Trigger on: `create`, `update`, `delete`
+- Filter:
+
+```groq
+_type in ["post", "author", "category"]
+```
+
+- Projection:
+
+```groq
+{
+  "_type": _type,
+  "slug": slug.current
+}
+```
+
+- Secret: same value as `SANITY_REVALIDATE_SECRET` in your deployment environment
+
+When content changes, the webhook revalidates `/blog` and the affected `/blog/[slug]` page.
+
 ## Getting Started
 
 First, run the development server:
