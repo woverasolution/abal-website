@@ -7,12 +7,56 @@ import { getAllPosts } from "@/sanity/lib/api";
 import { isSanityConfigured } from "@/sanity/lib/client";
 import { urlForImage } from "@/sanity/lib/image";
 
+const BLOG_URL = "https://abal.et/blog";
+const BLOG_DESCRIPTION =
+  "Insights, playbooks, and product updates for gym owners and fitness operators.";
+
 export const metadata: Metadata = {
   title: "Blog",
-  description:
-    "Insights, playbooks, and product updates for gym owners and fitness operators.",
+  description: BLOG_DESCRIPTION,
+  keywords: [
+    "gym management blog",
+    "fitness business ethiopia",
+    "gym operations insights",
+    "gym retention strategies",
+    "Abal blog",
+  ],
   alternates: {
-    canonical: "https://abal.et/blog",
+    canonical: BLOG_URL,
+  },
+  openGraph: {
+    title: "Abal Blog",
+    description: BLOG_DESCRIPTION,
+    url: BLOG_URL,
+    siteName: "Abal Gym Management",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Abal Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abal Blog",
+    description: BLOG_DESCRIPTION,
+    images: ["/og-image.jpg"],
+    creator: "@abal_et",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
+    },
   },
 };
 

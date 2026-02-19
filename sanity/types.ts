@@ -17,6 +17,8 @@ export type PostPreview = {
   publishedAt?: string;
   mainImage?: SanityImage;
   authorName?: string;
+  authorBio?: string;
+  authorImage?: SanityImage;
   categories?: string[];
 };
 

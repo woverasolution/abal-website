@@ -10,6 +10,8 @@ export const postsQuery = groq`
     publishedAt,
     mainImage,
     "authorName": coalesce(author->name, "Abal Team"),
+    "authorBio": author->bio,
+    "authorImage": author->image,
     "categories": categories[]->title
   }
 `;
@@ -24,6 +26,8 @@ export const postBySlugQuery = groq`
     mainImage,
     body,
     "authorName": coalesce(author->name, "Abal Team"),
+    "authorBio": author->bio,
+    "authorImage": author->image,
     "categories": categories[]->title
   }
 `;
