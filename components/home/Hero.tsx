@@ -90,11 +90,11 @@ export default function Hero() {
                     opacityClass: "opacity-70",
                   },
                   {
-                    src: "/logos/roots-logo.png",
-                    alt: "Roots",
-                    width: 3788,
-                    height: 1158,
-                    opacityClass: "opacity-70",
+                    src: "/logos/BWP Logo.png",
+                    alt: "BWP",
+                    width: 2569,
+                    height: 2044,
+                    opacityClass: "opacity-100",
                   },
                 ].map((logo) => (
                   <div
@@ -107,7 +107,8 @@ export default function Hero() {
                       alt={`${logo.alt} Logo`}
                       width={logo.width}
                       height={logo.height}
-                      className="h-7 sm:h-8 md:h-8 w-auto object-contain"
+                      className={`h-7 sm:h-8 md:h-8 w-auto object-contain transition-transform duration-300 ${logo.alt === "BWP" ? "scale-[1.8]" : ""
+                        }`}
                     />
                   </div>
                 ))}
