@@ -6,6 +6,7 @@ import TransformationSection from "@/components/home/TransformationSection";
 import LeadManagement from "@/components/home/LeadManagement";
 import Testimonials from "@/components/home/Testimonials";
 import CallToAction from "@/components/home/CallToAction";
+import LatestBlogs from "@/components/home/LatestBlogs";
 import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
@@ -25,6 +26,7 @@ export default function Home() {
       <TransformationSection />
       <LeadManagement />
       <Testimonials />
+      <LatestBlogs />
       <CallToAction />
       <Footer />
     </div>

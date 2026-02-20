@@ -33,41 +33,37 @@ export default function Navbar() {
                         <div className="bg-white rounded-full px-8 py-3 shadow-lg flex items-center space-x-8">
                             <Link
                                 href="/"
-                                className={`font-medium transition-colors ${
-                                    pathname === "/"
+                                className={`font-medium transition-colors ${pathname === "/"
                                         ? "text-[var(--brand)]"
                                         : "text-gray-700 hover:text-[var(--brand)]"
-                                }`}
+                                    }`}
                             >
                                 Home
                             </Link>
                             <Link
                                 href="/blog"
-                                className={`font-medium transition-colors ${
-                                    pathname.startsWith("/blog")
+                                className={`font-medium transition-colors ${pathname.startsWith("/blog")
                                         ? "text-[var(--brand)]"
                                         : "text-gray-700 hover:text-[var(--brand)]"
-                                }`}
+                                    }`}
                             >
                                 Blog
                             </Link>
                             <Link
                                 href="/pricing"
-                                className={`font-medium transition-colors ${
-                                    pathname === "/pricing"
+                                className={`font-medium transition-colors ${pathname === "/pricing"
                                         ? "text-[var(--brand)]"
                                         : "text-gray-700 hover:text-[var(--brand)]"
-                                }`}
+                                    }`}
                             >
                                 Pricing
                             </Link>
                             <Link
                                 href="/contact"
-                                className={`font-medium transition-colors ${
-                                    pathname === "/contact"
+                                className={`font-medium transition-colors ${pathname === "/contact"
                                         ? "text-[var(--brand)]"
                                         : "text-gray-700 hover:text-[var(--brand)]"
-                                }`}
+                                    }`}
                             >
                                 Contact
                             </Link>
@@ -97,41 +93,37 @@ export default function Navbar() {
                     <div className="px-4 pt-2 pb-6 space-y-1">
                         <Link
                             href="/"
-                            className={`block px-3 py-4 text-base font-medium rounded-md ${
-                                pathname === "/"
+                            className={`block px-3 py-4 text-base font-medium rounded-md ${pathname === "/"
                                     ? "text-[var(--brand)] bg-gray-50"
                                     : "text-gray-600 hover:text-[var(--brand)] hover:bg-gray-50"
-                            }`}
+                                }`}
                         >
                             Home
                         </Link>
                         <Link
                             href="/blog"
-                            className={`block px-3 py-4 text-base font-medium rounded-md ${
-                                pathname.startsWith("/blog")
+                            className={`block px-3 py-4 text-base font-medium rounded-md ${pathname.startsWith("/blog")
                                     ? "text-[var(--brand)] bg-gray-50"
                                     : "text-gray-600 hover:text-[var(--brand)] hover:bg-gray-50"
-                            }`}
+                                }`}
                         >
                             Blog
                         </Link>
                         <Link
                             href="/pricing"
-                            className={`block px-3 py-4 text-base font-medium rounded-md ${
-                                pathname === "/pricing"
+                            className={`block px-3 py-4 text-base font-medium rounded-md ${pathname === "/pricing"
                                     ? "text-[var(--brand)] bg-gray-50"
                                     : "text-gray-600 hover:text-[var(--brand)] hover:bg-gray-50"
-                            }`}
+                                }`}
                         >
                             Pricing
                         </Link>
                         <Link
                             href="/contact"
-                            className={`block px-3 py-4 text-base font-medium rounded-md ${
-                                pathname === "/contact"
+                            className={`block px-3 py-4 text-base font-medium rounded-md ${pathname === "/contact"
                                     ? "text-[var(--brand)] bg-gray-50"
                                     : "text-gray-600 hover:text-[var(--brand)] hover:bg-gray-50"
-                            }`}
+                                }`}
                         >
                             Contact
                         </Link>
